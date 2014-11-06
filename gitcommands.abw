@@ -1,0 +1,63 @@
+git init
+git status
+git add s.txt
+git commit -m “message”
+wildcard: git add ‘#.txt’
+git log
+
+to add our local repo to github
+
+git remote add repo-name https://github.com/try-git/try_git.git
+
+The push command tells Git where to put our commits when we're ready, and boy we're ready. So let's push our local changes to our origin repo (on GitHub).
+
+
+git push -u repo-name master
+
+pull to local repo:
+
+git pull repo-name master
+
+to knoe changes between local repo and github
+
+git diff HEAD
+
+add new file
+
+git add  dir/m.txt
+
+know the changes
+
+git diff --staged
+
+to remove last file
+
+git reset dir/m.txt
+
+m.txt is still there...but not staged
+
+get files from last commit...
+
+>>git checkout -- s.txt
+
+When developers are working on a feature or bug they'll often create a copy (aka. branch) of their code they can make separate commits to. Then when they're done they can merge this branch back into their main master branch.We want to remove all these pesky octocats, so let's create a branch called clean_up,
+
+git branch clean_up
+
+git checkout clean_up
+
+to remove file
+
+git rm ‘*.txt’
+
+again to commit
+
+git commit -m “message”
+
+git checkout master
+git merge clean_up
+git branch -d clean_up
+git push
+
+
+
